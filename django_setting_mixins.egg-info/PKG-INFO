@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: django-setting-mixins
+Version: 0.1.0
+Summary: Factories to pass settings to objects as kwargs.
+Home-page: https://github.com/jacinator/django-setting-mixins/
+Author: Jace Petkau
+Author-email: jacinator@outlook.com
+License: MIT
+Description: django-setting-mixins provides a mixin factory to reference Django settings and pass the values through to an object's __init__ method. If the setting can't be found it falls back to a default value.
+Platform: UNKNOWN
+Provides-Extra: testing

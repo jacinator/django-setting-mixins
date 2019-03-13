@@ -1,0 +1,2 @@
+include LICENSE, README.md, Pipfile, Pipfile.lock, setup.cfg, *.py
+recursive-include setting_mixins *.py
