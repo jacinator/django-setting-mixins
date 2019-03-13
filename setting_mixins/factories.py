@@ -1,6 +1,6 @@
 from django.utils.translation import gettext_lazy as _
 
-from .exceptions import MissingSettingNames, MultipleSettingDefaults
+from .exceptions import MissingSettingNames, MultipleSettingsWithDefaults
 from .mixins import BaseSettingMixin
 
 __all__ = ('setting_mixin_factory',)
@@ -23,7 +23,7 @@ def setting_mixin_factory(*names, setting='', default='', **kwargs):
         ))
 
     if len(names) > 1 and (setting != '' or default != ''):
-        raise MultipleSettingDefaults(_(
+        raise MultipleSettingsWithDefaults(_(
             'When setting_mixin_factory() is called with %(count)s '
             "setting names it doesn't expect to handle the setting "
             'label and default as well.'

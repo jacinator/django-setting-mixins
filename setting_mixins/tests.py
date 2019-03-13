@@ -1,6 +1,6 @@
 from django import test
 
-from .exceptions import MissingSettingNames, MultipleSettingDefaults
+from .exceptions import MissingSettingNames, MultipleSettingsWithDefaults
 from .factories import setting_mixin_factory
 from .mixins import BaseSettingMixin
 
@@ -89,7 +89,7 @@ class FactorySettingMixinTestCase(test.TestCase):
             setting_mixin_factory()
 
     def test_error_has_kwargs(self):
-        with self.assertRaisesMessage(MultipleSettingDefaults, (
+        with self.assertRaisesMessage(MultipleSettingsWithDefaults, (
             'When setting_mixin_factory() is called with 2 setting '
             "names it doesn't expect to handle the setting label and "
             'default as well.'

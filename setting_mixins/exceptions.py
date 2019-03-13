@@ -1,4 +1,4 @@
-__all__ = ('MissingSettingNames', 'MultipleSettingDefaults',)
+__all__ = ('MissingSettingNames', 'MultipleSettingsWithDefaults',)
 
 
 class MissingSettingNames(Exception):
@@ -10,7 +10,7 @@ class MissingSettingNames(Exception):
     pass
 
 
-class MultipleSettingDefaults(Exception):
+class MultipleSettingsWithDefaults(Exception):
     """The factory was passed multiple names with kwargs.
 
     When the factory function is passed the names of multiple settings
